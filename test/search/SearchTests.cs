@@ -6,26 +6,33 @@ namespace test.search
 {
     public class SearchTests
     {
-        private readonly Graph<int> Graph;
+        private readonly Graph<int> graph;
         public SearchTests()
         {
-            Graph<int> Graph = new Graph<int>(true);
-            Graph.addEdge(0, 1, 3);
-            Graph.addEdge(1, 2, 4);
-            Graph.addEdge(2, 0, 12);
-            Graph.addEdge(3, 1, 3);
-            Graph.addEdge(4, 3, 8);
-            Graph.addEdge(2, 4, 40);
+            graph = new Graph<int>(true);
+            graph.addEdge(0, 1, 3);
+            graph.addEdge(1, 2, 4);
+            graph.addEdge(2, 0, 12);
+            graph.addEdge(3, 1, 3);
+            graph.addEdge(4, 3, 8);
+            graph.addEdge(2, 4, 40);
         }
+
         [Fact]
-        public void createGraph()
+        public void whenDoDepthFirstSearchInTheGraphShouldEqualToResult()
         {
             var dfs = new DepthFirst<int>();
-            var dfsresult = dfs.search(Graph);
+            var dfsresult = dfs.search(graph);
+            Assert.Equal("0 1 2 4 3 ", dfsresult);
+        }
 
+
+        [Fact]
+        public void whenDoBreadthFirstSearchInTheGraphShouldEqualToResult()
+        {
             var bfs = new BreadthFirst<int>();
-           var bfsresult = bfs.search(Graph);
-
+            var bfsresult = bfs.search(graph);
+            Assert.Equal("0 1 2 4 3 ", bfsresult);
         }
     }
 }
