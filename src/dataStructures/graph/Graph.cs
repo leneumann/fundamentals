@@ -18,6 +18,11 @@ namespace src.dataStructures.graph
         {
             return allVertex;
         }
+        public List<Edge<T>> getAllEdges()
+        {
+            return allEdges;
+        }
+        public Vertex<T> getVertex(long vertexId) => allVertex.Find(x => x.getId() == vertexId);
         public void addEdge(long id1, long id2, int weight)
         {
             Vertex<T> vertex1 = null;

@@ -29,12 +29,12 @@ namespace src.dataStructures.graph
             this.IsDirected = isDirected;
         }
 
-        Vertex<T> getVertex1() => vertex1;
+        public Vertex<T> getVertex1() => vertex1;
 
-        Vertex<T> getVertex2() => vertex2;
+        public Vertex<T> getVertex2() => vertex2;
 
 
-        int getWeight() => weight;
+        public int getWeight() => weight;
 
         public bool isDirected() => IsDirected;
 
