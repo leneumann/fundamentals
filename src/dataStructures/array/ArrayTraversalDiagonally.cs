@@ -2,9 +2,9 @@ using System;
 
 namespace src.dataStructures.array
 {
-    public class ArrayTraversal
+    public class ArrayTraversalDiagonally
     {
-        public static string TraverseMatrixDiagonally(string[,] matrix)
+        public static string TraverseMatrix(string[,] matrix)
         {
             int totalRows = matrix.GetUpperBound(0) - matrix.GetLowerBound(0);
             int totalCols = matrix.GetUpperBound(1) - matrix.GetLowerBound(1);
@@ -31,7 +31,7 @@ namespace src.dataStructures.array
                 row = totalRows;
                 col = i;
 
-                while (col <= totalCols)
+                while (row >= 0 && col <= totalCols)
                 {
 
                     result += matrix[row, col];
@@ -43,7 +43,7 @@ namespace src.dataStructures.array
             return result;
         }
 
-        public static string TraverseMatrixDiagonallyInverted(string[,] matrix)
+        public static string TraverseMatrixInverted(string[,] matrix)
         {
             int totalRows = matrix.GetUpperBound(0) - matrix.GetLowerBound(0);
             int totalCols = matrix.GetUpperBound(1) - matrix.GetLowerBound(1);
