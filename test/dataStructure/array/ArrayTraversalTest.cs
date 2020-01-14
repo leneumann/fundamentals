@@ -7,7 +7,7 @@ namespace test.dataStructure.array
     {
 
         [Fact]
-        public void GivenValidMatrixWhenTraverseThenReturnValidResult()
+        public void GivenValidMatrixWhenTraverseDiagonallyThenReturnValidResult()
         {
             //Given
             string[,] matrix = {
@@ -21,7 +21,7 @@ namespace test.dataStructure.array
             Assert.Equal("adbgechfi", result);
         }
         [Fact]
-        public void GivenMatrixWithMoreColumsThanRowsWhenTraverseThenReturnValidResult()
+        public void GivenMatrixWithMoreColumsThanRowsWhenTraverseDiagonallyThenReturnValidResult()
         {
             //Given
             string[,] matrix = {
@@ -35,7 +35,7 @@ namespace test.dataStructure.array
             Assert.Equal("aebifcjgdkhl", result);
         }
         [Fact]
-        public void GivenMatrixWithMoreRowsThanColumsWhenTraverseThenReturnValidResult()
+        public void GivenMatrixWithMoreRowsThanColumsWhenTraverseDiagonallyThenReturnValidResult()
         {
             //Given
             string[,] matrix = {
@@ -50,7 +50,7 @@ namespace test.dataStructure.array
         }
 
         [Fact]
-        public void GivenValidMatrixWhenTraverseInvertedThenReturnValidResult()
+        public void GivenValidMatrixWhenTraverseDiagonallyInvertedThenReturnValidResult()
         {
             //Given
             string[,] matrix = {
@@ -66,7 +66,7 @@ namespace test.dataStructure.array
         }
 
         [Fact]
-        public void GivenMatrixWithMoreColumsThanRowsWhenTraverseInvertedThenReturnValidResult()
+        public void GivenMatrixWithMoreColumsThanRowsWhenTraverseDiagonallyInvertedThenReturnValidResult()
         {
             //Given
             string[,] matrix = {
