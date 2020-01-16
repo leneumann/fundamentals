@@ -72,5 +72,43 @@ namespace test.dataStructure.array
         //Then
         Assert.Equal("adgbehcfi",result);
         }
+
+        [Fact]
+        public void Given10rowsX5ColsMatrixWhenTraverseVerticallyThenReturnValidResult()
+        {
+        //Given
+         string[,] matrix = {
+                {"1", "2", "3", "4", "5"},
+                {"6", "7", "8", "9", "10"},
+                {"1", "2", "3", "4", "5"},
+                {"6", "7", "8", "9", "10"},
+                {"1", "2", "3", "4", "5"},
+                {"6", "7", "8", "9", "10"},
+                {"1", "2", "3", "4", "5"},
+                {"6", "7", "8", "9", "10"},
+                {"1", "2", "3", "4", "5"},
+                {"6", "7", "8", "9", "10"}};
+        //When
+        string result = ArrayTraversal.TraverseVertically(matrix);
+        //Then
+        Assert.Equal("1616161616272727272738383838384949494949510510510510510",result);
+        }
+
+        [Fact]
+        public void Given5rowsX10colsMatrixWhenTraverseVerticallyThenReturnValidResult()
+        {
+        //Given
+         string[,] matrix = {
+                { "1", "2", "3","4", "5", "6","7", "8", "9","10"},
+                { "1", "2", "3","4", "5", "6","7", "8", "9","10"},
+                { "1", "2", "3","4", "5", "6","7", "8", "9","10"},
+                { "1", "2", "3","4", "5", "6","7", "8", "9","10"},
+                { "1", "2", "3","4", "5", "6","7", "8", "9","10"}};
+        
+        //When
+        string result = ArrayTraversal.TraverseVertically(matrix);
+        //Then
+        Assert.Equal("1111122222333334444455555666667777788888999991010101010",result);
+        }
     }
 }
